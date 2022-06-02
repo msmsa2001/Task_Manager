@@ -1,0 +1,13 @@
+<%for(var i=0;i<users.length;i++){%>
+<tr class="tr">
+    <td class="td"><%=i+1%></td>
+    <td class="td"><%=users[i].name%></td>
+    <td class="td"><%=users[i].email%></td>
+    <td class="td"><%=users[i].gender%></td>
+    <td class="td"><%=users[i].status%></td>
+    <td class="td">
+        <span class="icon"><a href="/update_user?id=<%=users[i]._id%>"><i class="fas fa-pencil-alt"></i></a></span>
+        <span class="icon"><a class="all" data-id=<%=users[i]._id%>><i class="fas fa-times"></i></a></span>
+    </td>
+</tr>
+<%}%>

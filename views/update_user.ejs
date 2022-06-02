@@ -1,0 +1,43 @@
+<%- include("include/_header")%>
+
+<div class="main">
+    <div class="user-all"><a href="/"><i class="fas fa-angle-double-left"></i>  All User</a></div>
+    <div class="contian">
+        <div class="contains">
+            <h2>Update User</h2>
+            <p>Use the below form to Update an Account</p>
+            <form  method="post" id="update_user">
+                <table class="user_table">
+                    <tr class="user_tr">
+                        <td>Name</td>
+                        <td>
+                            <input type="hidden" name="id" value="<%=user._id%>">
+                            <input type="text" placeholder="name" name="name" value="<%= user.name %>"></td>
+                    </tr>
+                    <tr class="user_tr">
+                        <td>Email</td>
+                        <td><input type="email" placeholder="Email" name="email" value="<%=user.email%>"></td>
+                    </tr>
+                    <tr class="user_tr">
+                        <td>Gender</td>
+                        <td  id="td"><input type="radio" name="gender" value="Male"<%=user.gender=='Male'?'checked':''%>> Male
+                        <input type="radio" name="gender" value="Femail" <%=user.gender=='Femail'?'checked':''%>> Femail</td>
+                    </tr>
+                    <tr class="user_tr">
+                        <td>Status</td>
+                        <td ><input type="radio" name="status" value="Active" <%=user.status=='Active'?'checked':''%>> Active
+                        <input type="radio" name="status" value="Inactive" <%=user.status=='Inactive'?'checked':''%>> Inactive</td>
+                    </tr>
+                    <tr class="user_tr" style="text-align: center;">
+                        <td colspan="2">
+                            <button type="submit">Update Account</button>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include("include/_footer")%>

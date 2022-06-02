@@ -1,0 +1,27 @@
+<form action="/api/users" method="post" id="add_user">
+    <table class="user_table">
+        <tr class="user_tr">
+            <td>Name</td>
+            <td><input type="text" placeholder="name" name="name"></td>
+        </tr>
+        <tr class="user_tr">
+            <td>Email</td>
+            <td><input type="email" placeholder="Email" name="email"></td>
+        </tr>
+        <tr class="user_tr">
+            <td>Gender</td>
+            <td  id="td"><input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Femail"> Femail</td>
+        </tr>
+        <tr class="user_tr">
+            <td>Status</td>
+            <td ><input type="radio" name="status" value="Active"> Active
+            <input type="radio" name="status" value="Inactive"> Inactive</td>
+        </tr>
+        <tr class="user_tr" style="text-align: center;">
+            <td colspan="2">
+                <button type="submit">Create Account</button>
+            </td>
+        </tr>
+    </table>
+    </form>
